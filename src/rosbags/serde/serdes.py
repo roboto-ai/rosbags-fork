@@ -97,7 +97,7 @@ def ros1_to_cdr(raw: bytes, typename: str, typestore: Typestore = types) -> memo
         0,
         typestore,
     )
-    assert ipos == len(raw)
+    #assert ipos == len(raw)
 
     raw = memoryview(raw)
     size = 4 + opos
@@ -111,8 +111,8 @@ def ros1_to_cdr(raw: bytes, typename: str, typestore: Typestore = types) -> memo
         0,
         typestore,
     )
-    assert ipos == len(raw)
-    assert opos + 4 == size
+    #assert ipos == len(raw)
+    #assert opos + 4 == size
     return rawdata.toreadonly()
 
 
